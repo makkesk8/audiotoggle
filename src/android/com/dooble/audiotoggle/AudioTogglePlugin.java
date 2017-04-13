@@ -28,15 +28,13 @@ public class AudioTogglePlugin extends CordovaPlugin {
 	}
 	
 	public boolean setAudioMode(String mode) {
-	    Context context = webView.getContext();
-	    AudioManager audioManager = 
-	    	(AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+	    AudioManager audiMgr = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);
 	    
 	    if (mode.equals("earpiece")) {
-	    	audioManager.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_EARPIECE, AudioManager.ROUTE_ALL);
+	    	audiMgr.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_EARPIECE, AudioManager.ROUTE_ALL);
 	        return true;
 	    } else if (mode.equals("speaker")) {        
-	    	audioManager.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_SPEAKER, AudioManager.ROUTE_ALL);
+	    	audiMgr.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_SPEAKER, AudioManager.ROUTE_ALL);
 	        return true;
 	    }
 	    

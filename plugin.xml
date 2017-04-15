@@ -17,7 +17,7 @@
     </js-module>
 
     <platform name="android">
-        <source-file src="src/android/com/dooble/audiotoggle/AudioTogglePlugin.java" target-dir="src/com/dooble/audiotoggle" />
+        <source-file src="src/android/com/dooble/audiotoggle/toggleaudioplugin.java" target-dir="src/com/dooble/audiotoggle" />
   
         <config-file target="res/xml/config.xml" parent="/*">
 			<feature name="toggleaudioplugin">

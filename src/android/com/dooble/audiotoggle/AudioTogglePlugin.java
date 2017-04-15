@@ -1,4 +1,4 @@
-package com.dooble.audiotoggle;
+package com.dooble.toggleaudio;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -8,7 +8,7 @@ import org.json.JSONException;
 import android.content.Context;
 import android.media.AudioManager;
 
-public class AudioTogglePlugin extends CordovaPlugin {
+public class toggleaudioplugin extends CordovaPlugin {
 	public static final String ACTION_SET_AUDIO_MODE = "setAudioMode";
 	
 	@Override
